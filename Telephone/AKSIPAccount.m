@@ -366,7 +366,7 @@ NS_ASSUME_NONNULL_END
             if (!pj_list_empty(&messageData.hdr_list)) {
                 messageDataPtr = &messageData;
             } else {
-                pjsua_pool_release(pool);
+                pj_pool_release(pool);
                 pool = NULL;
             }
         }
@@ -383,7 +383,7 @@ NS_ASSUME_NONNULL_END
     }
 
     if (pool != NULL) {
-        pjsua_pool_release(pool);
+        pj_pool_release(pool);
     }
 
     dispatch_async(dispatch_get_main_queue(), ^{
