@@ -52,7 +52,8 @@
 	<key>NSContactsUsageDescription</key>
 	<string>Details from your contacts can be used for displaying names and phone labels and for phone number autocomplete.</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>© 2016–2022 64 Characters</string>
+	<string>© 2016–2025 64 Characters — Custom G.729 test build (Nov 20 2025)
+Spicy version by Nelson Camargo - Othos Telecom https://othos.co.za</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSMicrophoneUsageDescription</key>
