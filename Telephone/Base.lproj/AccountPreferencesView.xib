@@ -715,7 +715,6 @@
                                     <constraint firstItem="100" firstAttribute="trailing" secondItem="101" secondAttribute="trailing" id="I0z-8G-6f0"/>
                                     <constraint firstItem="497" firstAttribute="firstBaseline" secondItem="499" secondAttribute="firstBaseline" id="J73-ry-Wam"/>
                                     <constraint firstItem="497" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="412" secondAttribute="leading" constant="20" symbolic="YES" id="NVO-ft-eEw"/>
-                                    <constraint firstItem="c5k-qt-MNm" firstAttribute="leading" secondItem="499" secondAttribute="leading" id="NaZ-Xw-pFQ"/>
                                     <constraint firstItem="c5k-qt-MNm" firstAttribute="top" secondItem="fJH-fo-2Rq" secondAttribute="bottom" constant="6" id="NYj-mb-NAt"/>
                                     <constraint firstAttribute="trailing" secondItem="96" secondAttribute="trailing" priority="750" constant="32" id="O2G-bd-Wab"/>
                                     <constraint firstItem="499" firstAttribute="top" secondItem="97" secondAttribute="bottom" constant="8" symbolic="YES" id="R2l-cv-Gfq"/>
@@ -741,7 +740,7 @@
                                     <constraint firstAttribute="trailing" secondItem="499" secondAttribute="trailing" priority="750" constant="181" id="tqf-nn-Uio"/>
                                     <constraint firstItem="96" firstAttribute="trailing" secondItem="97" secondAttribute="trailing" id="v32-ho-csZ"/>
                                     <constraint firstItem="exM-uT-1sW" firstAttribute="top" secondItem="418" secondAttribute="bottom" constant="20" id="vPt-gn-8ic"/>
-                                    <constraint firstItem="c5k-qt-MNm" firstAttribute="leading" secondItem="fJH-fo-2Rq" secondAttribute="trailing" constant="8" id="vrq-5o-bvx"/>
+                                    <constraint firstItem="c5k-qt-MNm" firstAttribute="leading" secondItem="412" secondAttribute="leading" constant="20" symbolic="YES" id="vrq-5o-bvx"/>
                                     <constraint firstItem="mPb-0n-8xN" firstAttribute="top" secondItem="c5k-qt-MNm" secondAttribute="bottom" constant="6" id="wXu-np-rwW"/>
                                     <constraint firstItem="c5k-qt-MNm" firstAttribute="trailing" secondItem="412" secondAttribute="trailing" constant="20" symbolic="YES" id="x5B-cc-aFX"/>
                                     <constraint firstItem="101" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="412" secondAttribute="leading" constant="20" symbolic="YES" id="zox-FM-NJq"/>
