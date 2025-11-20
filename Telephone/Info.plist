@@ -6,6 +6,11 @@
 	<string>English</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
+	<key>CFBundleGetInfoString</key>
+	<string>© 2016–2025 64 Characters — Spicy edition (Nov 20 2025)
+Created by 64 Characters in Berlin, Germany
+www.64characters.com
+🌶️ Spicy Edition by Nelson Camargo - Othos Telecom https://othos.co.za</string>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -52,7 +57,7 @@
 	<key>NSContactsUsageDescription</key>
 	<string>Details from your contacts can be used for displaying names and phone labels and for phone number autocomplete.</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>© 2016–2025 64 Characters — Custom G.729 test build (Nov 20 2025)
+	<string>© 2016–2025 64 Characters — Spicy edition (Nov 20 2025)
 Spicy version by Nelson Camargo - Othos Telecom https://othos.co.za</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
