@@ -689,6 +689,10 @@
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rT0-9e-x5q" userLabel="Remove Header">
                                         <rect key="frame" x="178" y="30" width="33" height="23"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="rZR-Iv-FQ8"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="33" id="yUO-Or-fsB"/>
+                                        </constraints>
                                         <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSRemoveTemplate" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="YfS-Dp-MsJ">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -726,7 +730,7 @@
                                     <constraint firstItem="97" firstAttribute="top" secondItem="96" secondAttribute="bottom" constant="20" id="fMx-i2-RyU"/>
                                     <constraint firstItem="501" firstAttribute="leading" secondItem="499" secondAttribute="trailing" constant="3" id="hGQ-If-5fh"/>
                                     <constraint firstItem="497" firstAttribute="trailing" secondItem="101" secondAttribute="trailing" id="jxb-Uc-Iro"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="c5k-qt-MNm" secondAttribute="trailing" constant="20" symbolic="YES" id="k4Z-Ts-ljR"/>
+                                    <constraint firstAttribute="trailing" secondItem="c5k-qt-MNm" secondAttribute="trailing" constant="20" symbolic="YES" id="k4Z-Ts-ljR"/>
                                     <constraint firstItem="c5k-qt-MNm" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rT0-9e-x5q" secondAttribute="trailing" id="mlo-RP-59l"/>
                                     <constraint firstItem="exM-uT-1sW" firstAttribute="leading" secondItem="499" secondAttribute="leading" id="oQM-ME-2YZ"/>
                                     <constraint firstItem="rT0-9e-x5q" firstAttribute="leading" secondItem="mPb-0n-8xN" secondAttribute="trailing" constant="-1" id="p2Y-pZ-zpO"/>
@@ -741,6 +745,8 @@
                                     <constraint firstItem="mPb-0n-8xN" firstAttribute="top" secondItem="c5k-qt-MNm" secondAttribute="bottom" constant="6" id="wXu-np-rwW"/>
                                     <constraint firstItem="c5k-qt-MNm" firstAttribute="trailing" secondItem="412" secondAttribute="trailing" priority="750" constant="20" symbolic="YES" id="x5B-cc-aFX"/>
                                     <constraint firstItem="101" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="412" secondAttribute="leading" constant="20" symbolic="YES" id="zox-FM-NJq"/>
+                                    <constraint firstItem="rT0-9e-x5q" firstAttribute="width" secondItem="mPb-0n-8xN" secondAttribute="width" id="zUd-hV-9VQ"/>
+                                    <constraint firstItem="rT0-9e-x5q" firstAttribute="height" secondItem="mPb-0n-8xN" secondAttribute="height" id="ztW-2U-2Ic"/>
                                 </constraints>
                             </view>
                         </tabViewItem>
