@@ -197,10 +197,10 @@ PJ_VIDEO_LDFLAGS += $(SDL_LDFLAGS) $(FFMPEG_LDFLAGS) $(V4L2_LDFLAGS) \
                    $(OPENH264_LDFLAGS) $(VPX_LDFLAGS)
 
 # CFLAGS, LDFLAGS, and LIBS to be used by applications
-export APP_CC := clang
-export APP_CXX := clang++
+export APP_CC := gcc
+export APP_CXX := g++
 export APP_CFLAGS := -DPJ_AUTOCONF=1\
-	-arch arm64 -Os -DNDEBUG -mmacosx-version-min=13.5 -DPJ_IS_BIG_ENDIAN=0 -DPJ_IS_LITTLE_ENDIAN=1 -I/Users/ncamargo/projects/Telephone/ThirdParty/LibreSSL/include -I/Users/ncamargo/projects/Telephone/ThirdParty/Opus/include\
+	-I/Users/ncamargo/projects/Telephone/ThirdParty/bcg729/include -arch arm64 -Os -DNDEBUG -mmacosx-version-min=13.5 -DPJ_IS_BIG_ENDIAN=0 -DPJ_IS_LITTLE_ENDIAN=1 -I/Users/ncamargo/projects/Telephone/ThirdParty/LibreSSL/include -I/Users/ncamargo/projects/Telephone/ThirdParty/Opus/include\
 	$(PJ_VIDEO_CFLAGS) \
 	-I$(PJDIR)/pjlib/include\
 	-I$(PJDIR)/pjlib-util/include\
@@ -215,7 +215,7 @@ export APP_LDFLAGS := -L$(PJDIR)/pjlib/lib\
 	-L$(PJDIR)/pjsip/lib\
 	-L$(PJDIR)/third_party/lib\
 	$(PJ_VIDEO_LDFLAGS) \
-	 -L/Users/ncamargo/projects/Telephone/ThirdParty/LibreSSL/lib -L/Users/ncamargo/projects/Telephone/ThirdParty/Opus/lib
+	-L/Users/ncamargo/projects/Telephone/ThirdParty/bcg729/lib -arch arm64 -mmacosx-version-min=13.5 -L/Users/ncamargo/projects/Telephone/ThirdParty/LibreSSL/lib -L/Users/ncamargo/projects/Telephone/ThirdParty/Opus/lib
 export APP_LDXXFLAGS := $(APP_LDFLAGS)
 
 export APP_LIB_FILES := \
@@ -294,7 +294,7 @@ export APP_LDLIBS := $(PJSUA_LIB_LDLIB) \
 	$(APP_THIRD_PARTY_LIBS)\
 	$(APP_THIRD_PARTY_EXT)\
 	$(PJLIB_LDLIB) \
-	-lopus -lssl -lcrypto -lm -lpthread  -framework CoreAudio -framework CoreServices -framework AudioUnit -framework AudioToolbox -framework Foundation -framework AppKit
+	-lbcg729 -lopus -lssl -lcrypto -lm -lpthread  -framework CoreAudio -framework CoreServices -framework AudioUnit -framework AudioToolbox -framework Foundation -framework AppKit
 export APP_LDXXLIBS := $(PJSUA2_LIB_LDLIB) \
 	-lstdc++ \
 	$(APP_LDLIBS)
@@ -317,6 +317,6 @@ export PJ_LIBXX_FILES := $(APP_LIBXX_FILES)
 export PJ_INSTALL_DIR := /Users/ncamargo/projects/Telephone/ThirdParty/PJSIP
 export PJ_INSTALL_INC_DIR := ${prefix}/include
 export PJ_INSTALL_LIB_DIR := ${exec_prefix}/lib
-export PJ_INSTALL_CFLAGS := -I$(PJ_INSTALL_INC_DIR) -DPJ_AUTOCONF=1 -arch arm64 -Os -DNDEBUG -mmacosx-version-min=13.5 -DPJ_IS_BIG_ENDIAN=0 -DPJ_IS_LITTLE_ENDIAN=1 -I/Users/ncamargo/projects/Telephone/ThirdParty/LibreSSL/include -I/Users/ncamargo/projects/Telephone/ThirdParty/Opus/include
+export PJ_INSTALL_CFLAGS := -I$(PJ_INSTALL_INC_DIR) -DPJ_AUTOCONF=1 -I/Users/ncamargo/projects/Telephone/ThirdParty/bcg729/include -arch arm64 -Os -DNDEBUG -mmacosx-version-min=13.5 -DPJ_IS_BIG_ENDIAN=0 -DPJ_IS_LITTLE_ENDIAN=1 -I/Users/ncamargo/projects/Telephone/ThirdParty/LibreSSL/include -I/Users/ncamargo/projects/Telephone/ThirdParty/Opus/include
 export PJ_INSTALL_CXXFLAGS := -arch arm64 -Os -DNDEBUG -mmacosx-version-min=13.5 $(PJ_INSTALL_CFLAGS)
 export PJ_INSTALL_LDFLAGS := -L$(PJ_INSTALL_LIB_DIR) $(APP_LDLIBS)
