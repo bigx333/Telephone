@@ -41,9 +41,9 @@ Build and install:
 
 Download:
 
-    $ curl -o pjproject-2.10.tar.gz https://codeload.github.com/pjsip/pjproject/tar.gz/2.10
-    $ tar xzvf pjproject-2.10.tar.gz
-    $ cd pjproject-2.10
+    $ curl -o pjproject-2.15.1.tar.gz https://codeload.github.com/pjsip/pjproject/tar.gz/2.15.1
+    $ tar xzvf pjproject-2.15.1.tar.gz
+    $ cd pjproject-2.15.1
 
 Create `pjlib/include/pj/config_site.h`:
 
@@ -58,8 +58,8 @@ Create `pjlib/include/pj/config_site.h`:
 Patch:
 
     $ patch -p0 -i /path/to/Telephone/ThirdParty/PJSIP/patches/sock_qos_darwin.patch
-    $ patch -p0 -i /path/to/Telephone/ThirdParty/PJSIP/patches/os_core_unix.patch
     $ patch -p0 -i /path/to/Telephone/ThirdParty/PJSIP/patches/coreaudio_dev.patch
+    $ patch -p0 -i /path/to/Telephone/ThirdParty/PJSIP/patches/ssl_sock_ossl.patch
 
 Build and install (arm64-only binaries are sufficient for the app; keep x86_64 only if you explicitly need Rosetta):
 

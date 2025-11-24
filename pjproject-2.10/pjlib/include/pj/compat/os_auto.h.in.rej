@@ -1,9 +1,0 @@
-@@ -186,6 +186,8 @@
-       * pj_sockaddr_set_str_addr()
-       */
- #    define PJ_SOCKADDR_USE_GETADDRINFO 1
-+     /* Use dispatch semaphores */
-+#    define PJ_SEMAPHORE_USE_DISPATCH_SEM 1
- 
- #    include "TargetConditionals.h"
- #    if TARGET_OS_IPHONE
