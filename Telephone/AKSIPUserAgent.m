@@ -54,7 +54,7 @@ static const BOOL kAKSIPUserAgentDefaultDetectsVoiceActivity = YES;
 static const BOOL kAKSIPUserAgentDefaultUsesICE = NO;
 static const BOOL kAKSIPUserAgentDefaultUsesQoS = YES;
 static const NSInteger kAKSIPUserAgentDefaultTransportPort = 0;
-static const BOOL kAKSIPUserAgentDefaultUsesG711Only = NO;
+
 static const BOOL kAKSIPUserAgentDefaultLocksCodec = YES;
 
 static NSArray<NSString *> *AKDefaultEnabledCodecs(void) {
@@ -214,12 +214,7 @@ static NSArray<NSString *> *AKDefaultEnabledCodecs(void) {
     }
 }
 
-- (void)setUsesG711Only:(BOOL)usesG711Only {
-    if (_usesG711Only != usesG711Only) {
-        _usesG711Only = usesG711Only;
-        [self updateCodecs];
-    }
-}
+
 
 - (void)setEnabledCodecs:(NSArray<NSString *> *)enabledCodecs {
     if ([_enabledCodecs isEqualToArray:enabledCodecs]) {
@@ -267,7 +262,7 @@ static NSArray<NSString *> *AKDefaultEnabledCodecs(void) {
     [self setUsesICE:kAKSIPUserAgentDefaultUsesICE];
     [self setUsesQoS:kAKSIPUserAgentDefaultUsesQoS];
     [self setTransportPort:kAKSIPUserAgentDefaultTransportPort];
-    [self setUsesG711Only:kAKSIPUserAgentDefaultUsesG711Only];
+
     _enabledCodecs = [AKDefaultEnabledCodecs() copy];
     [self setLocksCodec:kAKSIPUserAgentDefaultLocksCodec];
     
@@ -863,11 +858,7 @@ static NSArray<NSString *> *AKDefaultEnabledCodecs(void) {
 }
 
 - (NSArray<NSString *> *)resolvedEnabledCodecs {
-    static NSString * const kPCMU = @"PCMU/8000/1";
-    static NSString * const kPCMA = @"PCMA/8000/1";
-    if (self.usesG711Only) {
-        return @[kPCMU, kPCMA];
-    }
+
 
     NSArray<NSString *> *preferred = self.enabledCodecs.count > 0 ? self.enabledCodecs : AKDefaultEnabledCodecs();
     NSArray<NSString *> *usablePreferred = [self usableCodecsFromPreferred:preferred];

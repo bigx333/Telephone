@@ -139,7 +139,7 @@ extern const NSInteger kAKSIPUserAgentInvalidIdentifier;
 
 
 /// A Boolean value indicating if only G.711 codec is used.
-@property(nonatomic, assign) BOOL usesG711Only;
+
 
 /// Ordered list of codec identifiers to advertise. Empty array means defaults.
 @property(nonatomic, copy) NSArray<NSString *> *enabledCodecs;

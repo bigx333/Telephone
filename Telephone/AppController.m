@@ -569,12 +569,7 @@ NS_ASSUME_NONNULL_END
     if (enabledCodecs.count > 0) {
         self.userAgent.enabledCodecs = enabledCodecs;
     }
-    BOOL usesG711Only = [defaults boolForKey:UserDefaultsKeys.useG711Only];
-    if (enabledCodecs.count == 0 && usesG711Only) {
-        self.userAgent.usesG711Only = YES;
-    } else {
-        self.userAgent.usesG711Only = NO;
-    }
+
     self.userAgent.locksCodec = [defaults boolForKey:UserDefaultsKeys.lockCodec];
 }
 
